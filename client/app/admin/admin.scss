@@ -1,0 +1,39 @@
+.trash { color:rgb(209, 91, 71); }
+.create-user { color: rgb(100, 179, 52); }
+
+.create-new-user {
+	display: flex;
+	border: none;
+	border-bottom: 1px lightgray solid;
+	margin-bottom: 0;
+	padding: 10px 15px;
+}
+
+.add-heading {
+	flex-grow: 1;
+}
+
+.create-user {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.user-list {
+	li {
+		display: flex;
+		border: none;
+		border-bottom: 1px lightgray solid;
+		margin-bottom: 0;
+		&:last-child { border-bottom: none; }
+
+		.user-info {
+			flex-grow: 1;
+		}
+		.trash {
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+		}
+	}
+}
