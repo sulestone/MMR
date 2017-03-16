@@ -90,24 +90,24 @@ export default function seedDatabaseIfNeeded() {
     // .then(() => console.log('finished populating sitess'))
     // .catch(err => console.log('error populating sites', err));
 
-    // User.find({}).remove()
-    //   .then(() => {
-    //     User.create({
-    //       provider: 'local',
-    //       name: 'Test User',
-    //       email: 'test@example.com',
-    //       password: 'test',
-    //       sites: [1, 2, 3]
-    //     }, {
-    //       provider: 'local',
-    //       role: 'admin',
-    //       name: 'Admin',
-    //       email: 'admin@example.com',
-    //       password: 'admin',
-    //       sites: [{location: '28888'}, {location: '00197'}, {location: '11111'}]
-    //     })
-    //     .then(() => console.log('finished populating users'))
-    //     .catch(err => console.log('error populating users', err));
-    //   });
+    User.find({}).remove()
+      .then(() => {
+        User.create({
+          provider: 'local',
+          name: 'Test User',
+          email: 'test@example.com',
+          password: 'test',
+          sites: ['28888', '00197', '11111']
+        }, {
+          provider: 'local',
+          role: 'admin',
+          name: 'Admin',
+          email: 'admin@example.com',
+          password: 'admin',
+          sites: ['28888', '00197', '11111']
+        })
+        .then(() => console.log('finished populating users'))
+        .catch(err => console.log('error populating users', err));
+      });
   }
 }

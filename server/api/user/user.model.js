@@ -12,7 +12,7 @@ var UserSchema = new Schema({
     lowercase: true,
     required: true
   },
-  site: { type : Array , "default" : [] },
+  sites: [String],
   role: {
     type: String,
     default: 'user'
